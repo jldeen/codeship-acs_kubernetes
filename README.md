@@ -24,7 +24,7 @@ k8acsdeploy:
   - ./:/deploy
 ```
 
-To interact with different Azure services you can simply call the Azure command directly. You can use any Azure service or command provided by [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). You can use environment variables or command arguments to set the Azure Datacenter Location or other parameters. Take a look at the [command line reference for Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/) to get started.   
+To interact with different Azure services you can simply call the Azure command directly. You can use any Azure service or command provided by [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=devops-0000-jessde). You can use environment variables or command arguments to set the Azure Datacenter Location or other parameters. Take a look at the [command line reference for Azure CLI 2.0](https://docs.microsoft.com/cli/azure/?WT.mc_id=devops-0000-jessde) to get started.   
 
 Take a look at the [Steps](https://documentation.codeship.com/pro/getting-started/steps/) documentation page so you have a good understanding how steps on Codeship work and how to set it up in your codeship-steps.yml.
 
@@ -50,7 +50,7 @@ kubectl:
   - Resource=Codeshipk8
   - Orchestrator=kubernetes
 ```
-To interact with the service, we will create a step that will execute the build of the image using the supplied [Dockerfile](./Dockerfile). The Dockerfile will copy the repo's app folder so it can be used for build and deployment in the ACS Kubernetes Cluster. From there, the Dockerfile will also establish a connection using [Kubectrl](https://docs.microsoft.com/en-us/azure/container-service/container-service-kubernetes-walkthrough) we can use to pass commands to build the image with our app. At the end of the app deployment, you will also see the website where your webapp can be viewed. One example of our steps file to pass multiple docker commands is as follows:
+To interact with the service, we will create a step that will execute the build of the image using the supplied [Dockerfile](./Dockerfile). The Dockerfile will copy the repo's app folder so it can be used for build and deployment in the ACS Kubernetes Cluster. From there, the Dockerfile will also establish a connection using [Kubectrl](https://docs.microsoft.com/azure/container-service/container-service-kubernetes-walkthrough?WT.mc_id=devops-0000-jessde) we can use to pass commands to build the image with our app. At the end of the app deployment, you will also see the website where your webapp can be viewed. One example of our steps file to pass multiple docker commands is as follows:
 
 ```
 - type: serial
@@ -66,5 +66,5 @@ Disclaimer: It is always recommended to read any script thoroughly before execut
 
 ### See also
 
-- [Deploy a Docker container hosting solution using the Azure portal](https://docs.microsoft.com/en-us/azure/container-service/container-service-deployment)
-- [Deploy a Docker container hosting solution using the Azure CLI 2.0](https://docs.microsoft.com/en-us/azure/container-service/container-service-create-acs-cluster-cli)
+- [Deploy a Docker container hosting solution using the Azure portal](https://docs.microsoft.com/azure/container-service/container-service-deployment?WT.mc_id=devops-0000-jessde)
+- [Deploy a Docker container hosting solution using the Azure CLI 2.0](https://docs.microsoft.com/azure/container-service/container-service-create-acs-cluster-cli?WT.mc_id=devops-0000-jessde)
